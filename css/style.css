@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 7px solid #ffa500
+}
+
+.header__left-side {
+    display: flex;
+    align-items: center
+}
+
+.header__film-icon {
+    width: 55px;
+}
+
+.header__title {
+    margin: 0;
+}
+
+.header__search{
+    max-width: 250px;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.header__search:focus-visible {
+    outline: none;
+    border: 2px solid rgb(232, 190, 54);
+    box-shadow: 0 0 10px rgb(232, 190, 54);
+}
+
+.main__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.film-block {
+    width: 380px;
+    height: 214px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.film-block:hover {
+    width: calc(380px * 1.05);
+    height: calc(214px * 1.05);
+    box-shadow: 0 0 10px rgb(232, 190, 54);
+}
+
+.text-link {
+    text-decoration: none;
+    color: rgba(178, 169, 169, 0.96);
+}
+
+.text-link:hover {
+    color: rgb(232, 190, 54);
+    cursor: pointer;
+    fill: rgb(232, 190, 54);
+    transition: all 0.2s ease-in-out;
+}
+
+.footer {
+    border-top: 7px solid #ffa500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    color: rgba(178, 169, 169, 0.96);
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    height: 60px;
+    width: calc(100% - 60px);
+    max-width: 1440px;
+    align-items: center
+}
+
+.footer__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+}
+
+.rss-logo {
+    fill: rgba(178, 169, 169, 0.96);
+    height: 40px;
+    width: 120px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column
+    }
+
+    .header__search {
+        margin-bottom: 10px;
+    }
+
+    .film-block {
+        width: 88.8vw;
+        height: 55vw
+    }
+
+    .film-block:hover {
+        width: calc(88.8vw * 1.05);
+        height: calc(55vw * 1.05);
+    }
+}
+
+@media (max-width: 380px) {
+
+    .footer_container {
+        flex-direction: column;
+    }
+
+    .footer__data {
+        justify-content: space-evenly;
+    }
+}

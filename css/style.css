@@ -25,7 +25,7 @@ header {
     margin: 0;
 }
 
-.header__search{
+.header__search {
     max-width: 250px;
     width: 100%;
     border-radius: 10px;
@@ -44,22 +44,115 @@ header {
     flex-wrap: wrap;
 }
 
-.film-block {
-    width: 380px;
-    height: 214px;
+.movie-block {
+    width: 269px;
+    /*height: 410px;*/
+    height: 700px;
     margin-top: 15px;
     margin-bottom: 15px;
-    background-position: center;
-    background-size: cover;
+    position: relative;
     border-radius: 10px;
+    border: 1px solid rgb(232, 190, 54);
     cursor: pointer;
-    transition: all 0.1s ease-in-out;
+    transition: height 1s ease-in-out;
+    overflow: hidden;
+
 }
 
-.film-block:hover {
-    width: calc(380px * 1.05);
-    height: calc(214px * 1.05);
+.movie-block:hover {
     box-shadow: 0 0 10px rgb(232, 190, 54);
+}
+
+.movie-block__background {
+    width: 269px;
+    height: 410px;
+    background-position: center;
+    background-size: cover;
+}
+
+.rating {
+    position: absolute;
+    top: 0;
+    width: 35px;
+    height: 24px;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.rating-big {
+    background-color: #3bb33b
+}
+
+.rating-medium {
+    background-color: #aaaaaa;
+}
+
+.rating-little {
+    background-color: #ff0b0b
+}
+
+.movie-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(232, 190, 54);
+    margin: 0;
+}
+
+.info-movie {
+    cursor: auto;
+}
+
+.plot-info {
+    font-size: 12px;
+    text-indent: 15px;
+    padding: 5px;
+    text-align: justify;
+    color: #aaaaaa;
+}
+
+.genres-movie, .stars-movie {
+    margin: 5px;
+    font-size: 13px;
+}
+
+.genres-title, .stars-title {
+    font-weight: 600;
+    color: #e69526
+}
+
+.genres-info, .stars-info {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+.button-watch-movie {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(232, 190, 54);
+    color: #000000;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-watch-movie:hover {
+    background-color: #e69526;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgb(232, 190, 54);
+}
+
+.link-watch-movie {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .text-link {
@@ -116,12 +209,12 @@ header {
         margin-bottom: 10px;
     }
 
-    .film-block {
+    .movie-block {
         width: 88.8vw;
         height: 55vw
     }
 
-    .film-block:hover {
+    .movie-block:hover {
         width: calc(88.8vw * 1.05);
         height: calc(55vw * 1.05);
     }

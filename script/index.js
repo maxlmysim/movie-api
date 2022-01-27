@@ -1,12 +1,10 @@
 async function getDataMovies(query) {
+    let url = 0;
     if (!query) {
-        const url = 'https://imdb-api.com/API/AdvancedSearch/k_x2rr85bg?groups=now-playing-us'
-        console.log('no');
+        url = 'https://imdb-api.com/API/AdvancedSearch/k_x2rr85bg?groups=now-playing-us'
     } else {
-        const url = `https://imdb-api.com/API/AdvancedSearch/k_x2rr85bg?title=${query}&count=10`;  // api: [k_042uslfp]  [k_x2rr85bg]
-        console.log('yes');
+        url = `https://imdb-api.com/API/AdvancedSearch/k_x2rr85bg?title=${query}&count=10`;  // api: [k_042uslfp]  [k_x2rr85bg]
     }
-    console.log('go');
     const res = await fetch(url);
     const data = await res.json();
 
@@ -14,7 +12,7 @@ async function getDataMovies(query) {
         item.remove();
     });
 
-    data.results.forEach((item) => {
+    data.results.slice(0, 10).forEach((item) => {
         createForm(item);
     });
 

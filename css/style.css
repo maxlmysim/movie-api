@@ -55,7 +55,6 @@ header {
     cursor: pointer;
     transition: height 1s ease-in-out;
     overflow: hidden;
-
 }
 
 .movie-block:hover {
@@ -207,7 +206,7 @@ header {
     .header__search {
         margin: 10px;
     }
-   }
+}
 
 @media (max-width: 380px) {
 

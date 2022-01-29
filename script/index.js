@@ -1,9 +1,14 @@
 async function getDataMovies(query) {
+
+    document.querySelectorAll('.movie-block').forEach((item) => {
+        item.remove();
+    });
+
     loadData('add');
 
     let url = 'https://imdb-api.com/API/AdvancedSearch/k_x2rr85bg?groups=now-playing-us';
     if (query) {
-        url = `https://imdb-api.com/API/AdvancedSearch/k_x2rr85bg?title=${query}&count=10`;  // api: [k_042uslfp]  [k_x2rr85bg]
+        url = `https://imdb-api.com/API/AdvancedSearch/k_x2rr85bg?title=${query}&count=15`;  // api: [k_042uslfp]  [k_x2rr85bg]
     }
     const res = await fetch(url);
 
@@ -16,12 +21,7 @@ async function getDataMovies(query) {
         return;
     }
 
-    document.querySelectorAll('.movie-block').forEach((item) => {
-        item.remove();
-    });
-
-
-    data.results.slice(0, 10).forEach((item) => {
+    data.results.slice(0, 15).forEach((item) => {
         createForm(item);
     });
 
@@ -29,13 +29,13 @@ async function getDataMovies(query) {
 }
 
 function loadData(event, error) {
-    const load = document.querySelector('.circle-load');
+    const load = document.querySelector('.container-load');
     const errorMessage = document.querySelector('.error-message');
 
     if (event === 'del') {
         load.style.display = 'none';
     } else {
-        load.style.display = 'block';
+        load.style.display = 'flex';
     }
 
     if(error) {

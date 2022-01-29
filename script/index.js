@@ -1,21 +1,46 @@
 async function getDataMovies(query) {
+    loadData('add');
+
     let url = 'https://imdb-api.com/API/AdvancedSearch/k_x2rr85bg?groups=now-playing-us';
-        if (query) {
+    if (query) {
         url = `https://imdb-api.com/API/AdvancedSearch/k_x2rr85bg?title=${query}&count=10`;  // api: [k_042uslfp]  [k_x2rr85bg]
     }
-
     const res = await fetch(url);
+
     const data = await res.json();
+
+    loadData('del');
+
+    if (!data.results[0]) {
+        loadData('add', 'eror');
+        return;
+    }
 
     document.querySelectorAll('.movie-block').forEach((item) => {
         item.remove();
     });
+
 
     data.results.slice(0, 10).forEach((item) => {
         createForm(item);
     });
 
     addEvent();
+}
+
+function loadData(event, error) {
+    const load = document.querySelector('.circle-load');
+    const errorMessage = document.querySelector('.error-message');
+
+    if (event === 'del') {
+        load.style.display = 'none';
+    } else {
+        load.style.display = 'block';
+    }
+
+    if(error) {
+        errorMessage.style.display = 'block'
+    }
 }
 
 function createForm(movie) {

@@ -1,265 +1,265 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 body {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: black;
-    font-family: "Open Sans", sans-serif;
-    color: white;
-
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  font-family: "Open Sans", sans-serif;
+  color: white;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 7px solid #ffa500
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 7px solid #ffa500;
 }
 
 .header__left-side {
-    display: flex;
-    align-items: center
+  display: flex;
+  align-items: center;
 }
 
 .header__film-icon {
-    width: 60px;
+  width: 60px;
 }
 
 .header__title {
-    margin: 0;
+  margin: 0;
 }
 
 .header__search {
-    width: 40vw;
-    height: 25px;
-    border-radius: 15px;
-    padding-left: 10px;
+  width: 40vw;
+  height: 25px;
+  border-radius: 15px;
+  padding-left: 10px;
 }
 
 .header__search:focus-visible {
-    outline: none;
-    border: 2px solid rgb(232, 190, 54);
-    box-shadow: 0 0 10px rgb(232, 190, 54);
+  outline: none;
+  border: 2px solid rgb(232, 190, 54);
+  box-shadow: 0 0 10px rgb(232, 190, 54);
 }
 
 .main__container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .container-load {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .circle-load {
-    transform: translate(-40%, -50%);
-    animation: effect 1s linear infinite;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 6px solid rgba(255, 255, 255, 0.3);
-    border-top-color: rgb(232, 190, 54);
+  transform: translate(-40%, -50%);
+  animation: effect 1s linear infinite;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top-color: rgb(232, 190, 54);
 }
 
 @keyframes effect {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
-
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .error-message {
-    display: none;
+  display: none;
 }
 
 .movie-block {
-    width: 269px;
-    height: 410px;
-    margin: 20px;
-    position: relative;
-    border-radius: 10px;
-    border: 1px solid rgb(232, 190, 54);
-    cursor: pointer;
-    transition: height 1s ease-in-out;
-    overflow: hidden;
+  width: 269px;
+  height: 410px;
+  margin: 20px;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid rgb(232, 190, 54);
+  cursor: pointer;
+  transition: height 1s ease-in-out;
+  overflow: hidden;
 }
 
 .movie-block:hover {
-    box-shadow: 0 0 10px rgb(232, 190, 54);
+  box-shadow: 0 0 10px rgb(232, 190, 54);
 }
 
 .movie-block__background {
-    width: 269px;
-    height: 410px;
-    background-position: center;
-    background-size: cover;
-    box-shadow: 0 0 15px #ffffff;
+  width: 269px;
+  height: 410px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 15px #ffffff;
 }
 
 .rating {
-    position: absolute;
-    top: 0;
-    width: 35px;
-    height: 24px;
-    margin-top: 5px;
-    margin-left: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+  position: absolute;
+  top: 0;
+  width: 35px;
+  height: 24px;
+  margin-top: 5px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .rating-big {
-    background-color: #3bb33b
+  background-color: #3bb33b;
 }
 
 .rating-medium {
-    background-color: #aaaaaa;
+  background-color: #aaaaaa;
 }
 
 .rating-little {
-    background-color: #ff0b0b
+  background-color: #ff0b0b;
 }
 
 .movie-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(232, 190, 54);
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(232, 190, 54);
+  margin: 0;
 }
 
 .info-movie {
-    cursor: auto;
+  cursor: auto;
 }
 
 .plot-info {
-    font-size: 15px;
-    text-indent: 15px;
-    padding: 5px;
-    text-align: justify;
-    color: #aaaaaa;
+  font-size: 15px;
+  text-indent: 15px;
+  padding: 5px;
+  text-align: justify;
+  color: #aaaaaa;
 }
 
-.genres-movie, .stars-movie {
-    margin: 5px;
-    font-size: 13px;
+.genres-movie,
+.stars-movie {
+  margin: 5px;
+  font-size: 13px;
 }
 
-.genres-title, .stars-title {
-    font-weight: 600;
-    color: #e69526
+.genres-title,
+.stars-title {
+  font-weight: 600;
+  color: #e69526;
 }
 
-.genres-info, .stars-info {
-    color: #aaaaaa;
-    font-size: 16px;
+.genres-info,
+.stars-info {
+  color: #aaaaaa;
+  font-size: 16px;
 }
 
 .button-watch-movie {
-    width: 150px;
-    height: 30px;
-    background-color: rgb(232, 190, 54);
-    color: #000000;
-    margin: 5px;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    transition: all 0.2s ease-in-out;
+  width: 150px;
+  height: 30px;
+  background-color: rgb(232, 190, 54);
+  color: #000000;
+  margin: 5px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
 }
 
 .button-watch-movie:hover {
-    background-color: #e69526;
-    color: #ffffff;
-    box-shadow: 0 0 10px rgb(232, 190, 54);
+  background-color: #e69526;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgb(232, 190, 54);
 }
 
 .link-watch-movie {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
 .text-link {
-    text-decoration: none;
-    color: rgba(178, 169, 169, 0.96);
+  text-decoration: none;
+  color: rgba(178, 169, 169, 0.96);
 }
 
 .text-link:hover {
-    color: rgb(232, 190, 54);
-    cursor: pointer;
-    fill: rgb(232, 190, 54);
-    transition: all 0.2s ease-in-out;
+  color: rgb(232, 190, 54);
+  cursor: pointer;
+  fill: rgb(232, 190, 54);
+  transition: all 0.2s ease-in-out;
 }
 
 footer {
-    border-top: 7px solid #ffa500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-size: 20px;
-    color: rgba(178, 169, 169, 0.96);
+  border-top: 7px solid #ffa500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+  color: rgba(178, 169, 169, 0.96);
 }
 
 .footer__container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    height: 60px;
-    width: calc(100% - 60px);
-    max-width: 1440px;
-    align-items: center
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  height: 60px;
+  width: calc(100% - 60px);
+  max-width: 1440px;
+  align-items: center;
 }
 
 .footer__data {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
 }
 
 .rss-logo {
-    fill: rgba(178, 169, 169, 0.96);
-    height: 40px;
-    width: 120px;
+  fill: rgba(178, 169, 169, 0.96);
+  height: 40px;
+  width: 120px;
 }
 
 @media (max-width: 800px) {
-    header {
-        flex-direction: column
-    }
+  header {
+    flex-direction: column;
+  }
 
-    .header__film-icon {
-        width: 50px;
-    }
+  .header__film-icon {
+    width: 50px;
+  }
 
-    .header__search {
-        width: 70vw;
-        margin: 10px;
-    }
- }
+  .header__search {
+    width: 70vw;
+    margin: 10px;
+  }
+}
 
 @media (max-width: 380px) {
+  .footer_container {
+    flex-direction: column;
+  }
 
-    .footer_container {
-        flex-direction: column;
-    }
-
-    .footer__data {
-        justify-content: space-evenly;
-    }
+  .footer__data {
+    justify-content: space-evenly;
+  }
 }

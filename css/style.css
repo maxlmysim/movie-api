@@ -22,6 +22,8 @@ header {
 .header__left-side {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: #fff;
 }
 
 .header__film-icon {
